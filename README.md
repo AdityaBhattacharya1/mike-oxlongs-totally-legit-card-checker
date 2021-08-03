@@ -1,5 +1,7 @@
 # Mike Oxlong's Credit Card Security™
 
+<img src="./readmeAssets/app.png" />
+
 Do you suspect that your credit card details have been stolen by a hacker? Well look no further, because this piece of generic software will solve all your questions - from whether life is a simulation to where you want to eat tonight.
 
 ## Features
@@ -8,7 +10,7 @@ Do you suspect that your credit card details have been stolen by a hacker? Well 
 -   **Accessible**: We, here at Mike Oxlong Technology (not a real company), leave no stone unturned.
 -   **Made with Tauri**: Should be fast (fast enough)
 -   **Detail verification**: So that you don't send any fake data (harmful for our business)
--   **Cross-Platform**: Yes.
+-   **Cross-Platform?**: Yes.
 -   **Safe and Secure?**: Yes.
 
 ## Tech Stack
