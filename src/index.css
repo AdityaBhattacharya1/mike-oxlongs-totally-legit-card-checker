@@ -1,8 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+:root {
+	--background-primary: #11121d;
+	--text-primary: #fff;
+	--text-secondary: #e53265;
+	--text-tertiary: rgba(47, 214, 181, 1);
+	--error-text: rgb(255, 0, 0);
+}
+
 * {
 	font-family: 'Poppins', sans-serif;
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	background-color: var(--background-primary);
 }

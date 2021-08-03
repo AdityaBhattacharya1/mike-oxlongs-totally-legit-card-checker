@@ -79,7 +79,11 @@ const FormGroup = ({ validityHandler }) => {
 					card details.
 				</p>
 			)}
-			<button type="submit" disabled={!formIsValid}>
+			<button
+				type="submit"
+				disabled={!formIsValid}
+				className={classes['submit-btn']}
+			>
 				Scan Database
 			</button>
 		</form>

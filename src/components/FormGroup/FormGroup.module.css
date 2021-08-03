@@ -1,13 +1,56 @@
+@import '../../index.css';
+
+form {
+	color: var(--text-primary);
+}
+
+input {
+	display: block;
+	width: 25rem;
+	height: 2.5rem;
+	padding: 1rem;
+	border-radius: 25px;
+	border: var(--text-secondary) solid 1px;
+	background: var(--text-primary);
+	margin: 0.5rem 1rem;
+	outline: none;
+}
+
 .invalid {
 	border: 1px solid #b40e0e;
 	background-color: #fddddd;
 }
 
 .invalid:focus {
-	border-color: #ff8800;
+	border-color: var(--text-tertiary);
 	background-color: #fbe8d2;
+	border: #b40e0e solid 1px;
 }
 
 .error-text {
-	color: #b40e0e;
+	color: var(--error-text);
+	font-size: 0.7em;
+}
+
+.submit-btn {
+	margin-top: 1rem;
+	width: 10rem;
+	height: 3rem;
+	color: var(--text-tertiary);
+	border-radius: 25px;
+	border-color: var(--text-tertiary);
+	cursor: pointer;
+	transition: 0.3s ease;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+	color: var(--background-primary);
+	background-color: var(--text-tertiary);
+}
+
+.submit-btn:disabled {
+	color: rgba(255, 255, 255, 0.185);
+	background-color: rgba(47, 214, 181, 0.185);
+	cursor: default;
 }

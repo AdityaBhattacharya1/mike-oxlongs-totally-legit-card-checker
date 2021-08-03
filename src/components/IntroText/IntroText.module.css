@@ -1,0 +1,12 @@
+@import '../../index.css';
+
+.header {
+	color: var(--text-secondary);
+	padding-bottom: 1rem;
+}
+
+.content {
+	color: var(--text-primary);
+	padding-bottom: 1rem;
+	padding-right: 2rem;
+}

@@ -1,16 +1,10 @@
 import { useState } from 'react'
-import FormGroup from './components/FormGroup/FormGroup'
-import Intro from './components/Intro/Intro'
+import IntroPage from './pages/IntroPage'
 
 function App() {
 	const [formIsValid, setFormIsValid] = useState(false)
 	if (!formIsValid) {
-		return (
-			<>
-				<Intro />
-				<FormGroup validityHandler={setFormIsValid} />
-			</>
-		)
+		return <IntroPage validityHandler={setFormIsValid} />
 	} else {
 		return <h1>Placeholder!</h1>
 	}
