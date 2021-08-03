@@ -1,0 +1,15 @@
+version: 2
+updates:
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+      day: 'wednesday'
+    commit-message:
+      prefix: '[Dependabot]'
+    labels:
+      - 'dependencies'
+    open-pull-requests-limit: 10
+    reviewers:
+      - 'AdityaBhattacharya1'
+    versioning-strategy: 'increase'
