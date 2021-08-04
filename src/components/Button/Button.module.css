@@ -1,0 +1,24 @@
+@import '../../index.css';
+
+button {
+	margin-top: 1rem;
+	width: 10rem;
+	height: 3rem;
+	color: var(--text-tertiary);
+	border-radius: 25px;
+	border-color: var(--text-tertiary);
+	cursor: pointer;
+	transition: 0.3s ease;
+}
+
+button:focus,
+button:hover {
+	color: var(--background-primary);
+	background-color: var(--text-tertiary);
+}
+
+button:disabled {
+	color: rgba(255, 255, 255, 0.185);
+	background-color: rgba(47, 214, 181, 0.185);
+	cursor: default;
+}

@@ -1,10 +1,11 @@
 import React from 'react'
 import useInput from '../../hooks/useInput'
 import { luhnCheckHandler } from '../../utils/luhnCheckHandler'
+import Button from '../Button/Button'
 import classes from './FormGroup.module.css'
 
 // matches for dd/yy format
-const dateRegex = /^(0[1-9]|1[012])[ -/]\d\d$/i
+const dateRegex = /^(0[1-9]|1[012])[ /]\d\d$/i
 
 const FormGroup = ({ validityHandler }) => {
 	const {
@@ -57,6 +58,7 @@ const FormGroup = ({ validityHandler }) => {
 				onChange={creditCardNumChangeHandler}
 				onBlur={creditCardBlurHandler}
 				className={creditCardClasses}
+				placeholder="XXXXXXXXXXXXXXXX"
 			/>
 			{creditCardHasError && (
 				<p className={classes['error-text']}>
@@ -72,6 +74,7 @@ const FormGroup = ({ validityHandler }) => {
 				onChange={expDateChangeHandler}
 				onBlur={expBlurHandler}
 				className={expClasses}
+				placeholder="MM/YY"
 			/>
 			{expHasError && (
 				<p className={classes['error-text']}>
@@ -79,13 +82,11 @@ const FormGroup = ({ validityHandler }) => {
 					card details.
 				</p>
 			)}
-			<button
-				type="submit"
+			<Button
 				disabled={!formIsValid}
-				className={classes['submit-btn']}
-			>
-				Scan Database
-			</button>
+				text="Scan Database"
+				type="submit"
+			/>
 		</form>
 	)
 }

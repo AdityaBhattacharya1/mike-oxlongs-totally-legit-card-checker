@@ -1,3 +1,8 @@
+/**
+ *
+ * @param {Number} num
+ * @returns Boolean
+ */
 export const luhnCheckHandler = (num) => {
 	let strNum = '' + num
 	if (strNum.trim().length < 15) {

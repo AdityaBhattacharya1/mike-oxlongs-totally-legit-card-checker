@@ -1,0 +1,28 @@
+@import '../index.css';
+
+.spinner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 2rem;
+}
+
+.loading-text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 1rem;
+	color: var(--text-primary);
+}
+
+.success-text {
+	color: var(--text-tertiary);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 1rem;
+}
+
+.retry-btn {
+	width: 20rem;
+}
