@@ -1,5 +1,10 @@
 @import '../../index.css';
 
+*::selection {
+	color: var(--text-primary);
+	background-color: var(--text-secondary);
+}
+
 form {
 	color: var(--text-primary);
 }
@@ -10,24 +15,25 @@ input {
 	height: 2.5rem;
 	padding: 1rem;
 	border-radius: 25px;
-	border: var(--text-secondary) solid 1px;
+	border: var(--text-tertiary) solid 1px;
 	background: var(--text-primary);
 	margin: 0.5rem 1rem;
 	outline: none;
 }
 
 .invalid {
-	border: 1px solid #b40e0e;
+	border: 1px solid var(--text-secondary);
 	background-color: #fddddd;
 }
 
 .invalid:focus {
 	border-color: var(--text-tertiary);
-	background-color: #fbe8d2;
-	border: #b40e0e solid 1px;
+	background-color: #fff3e4;
+	border: var(--text-secondary) solid 1px;
 }
 
 .error-text {
 	color: var(--error-text);
-	font-size: 0.7em;
+	font-size: 0.8rem;
+	padding-bottom: 0.7rem;
 }

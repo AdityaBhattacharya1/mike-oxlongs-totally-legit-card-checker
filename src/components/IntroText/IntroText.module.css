@@ -10,3 +10,13 @@
 	padding-bottom: 1rem;
 	padding-right: 2rem;
 }
+
+.header::selection {
+	color: var(--text-primary);
+	background-color: var(--text-tertiary);
+}
+
+.content::selection {
+	color: var(--text-primary);
+	background-color: var(--text-secondary);
+}

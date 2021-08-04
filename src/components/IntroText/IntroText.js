@@ -3,7 +3,7 @@ import classes from './IntroText.module.css'
 
 const IntroText = () => {
 	return (
-		<div>
+		<>
 			<h1 className={classes.header}>
 				Is your credit card in a hacker's database?
 			</h1>
@@ -12,7 +12,7 @@ const IntroText = () => {
 				information here and we will scan thousands of hacker databases
 				to see if any they have match yours
 			</p>
-		</div>
+		</>
 	)
 }
 

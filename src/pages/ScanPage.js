@@ -10,11 +10,9 @@ const Loading = () => {
 			<div className={classes.spinner}>
 				<LoadingSpinner />
 			</div>
-			<div>
-				<p className={classes['loading-text']}>
-					Scanning the Database for possible matches...
-				</p>
-			</div>
+			<p className={classes['loading-text']}>
+				Scanning the Database for possible matches...
+			</p>
 		</>
 	)
 }
@@ -22,9 +20,7 @@ const Loading = () => {
 const SuccessComponent = ({ validityHandler }) => {
 	return (
 		<>
-			<div>
-				<SuccessSvg />
-			</div>
+			<SuccessSvg />
 			<h1 className={classes['success-text']}>
 				Congratulations! No matches were found.
 			</h1>
