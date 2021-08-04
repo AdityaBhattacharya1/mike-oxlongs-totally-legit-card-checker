@@ -21,11 +21,12 @@ Do you suspect that your credit card details have been stolen by a hacker? Well 
 
 ## On a Serious note
 
--   This software is neither sending any data anywhere nor is it storing it.
+-   This software is neither sending any data anywhere nor is it storing any data.
 -   Data verification:
     -   Credit card number is being checked with the [Luhn algorithm](https://en.wikipedia.org/wiki/Luhn_algorithm).
     -   Expiry date is being checked via regex.
 -   Unfortunately, the Mike Oxlong company does not exist (yet).
+-   Although it is not sending or storing any data, it is just a joke application and should only be taken as a joke. This is not meant to be a commercial product.
 
 ## How to Use
 
@@ -77,3 +78,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+## Inspiration
+
+[Inspired by this post.](https://i.redd.it/l36rh43s9s061.jpg)

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import LoadingSpinner from '../components/LoadingSpinner'
 import classes from './ScanPage.module.css'
-import { ReactComponent as SuccessSvg } from '../components/successThumbsUp.svg'
+import { ReactComponent as SuccessSvg } from '../assets/successThumbsUp.svg'
 import Button from '../components/Button/Button'
 
 const Loading = () => {
