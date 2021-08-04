@@ -25,8 +25,8 @@
 			"externalBin": [],
 			"copyright": "",
 			"category": "DeveloperTool",
-			"shortDescription": "",
-			"longDescription": "",
+			"shortDescription": "A totally legit credit card vulnerability checker.",
+			"longDescription": "A totally legit credit card vulnerability checker. This is meant as a joke project and is not to be used commercially.",
 			"deb": {
 				"depends": [],
 				"useBootstrapper": false
