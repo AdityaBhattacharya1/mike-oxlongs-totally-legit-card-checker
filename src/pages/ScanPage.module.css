@@ -23,16 +23,6 @@
 	padding-top: 1rem;
 }
 
-.success-para {
-	color: var(--text-tertiary);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-left: 20rem;
-	margin-right: 20rem;
-	padding-top: 2rem;
-}
-
 .error-text {
 	color: var(--text-secondary);
 	display: flex;
@@ -42,12 +32,5 @@
 
 .retry-btn {
 	width: 20rem;
-}
-
-.info-link {
-	color: var(--text-primary);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding-top: 2rem;
+	margin: 2rem;
 }

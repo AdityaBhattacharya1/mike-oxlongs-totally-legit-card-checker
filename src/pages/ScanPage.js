@@ -55,21 +55,6 @@ function ErrorComponent({ detections, validityHandler }) {
 					: `${detections} detections`}{' '}
 				in our database!
 			</h1>
-			<h4 className={classes['error-text']}>
-				haha jk don't worry you are probably safe
-			</h4>
-
-			<p className={classes['success-para']}>
-				This software is not meant for malicious purposes, but if you
-				fell for this ensure that you are aware of what you are
-				downloading on your device.
-			</p>
-			<a
-				className={classes['info-link']}
-				href="https://support.google.com/google-ads/answer/2375413?hl=en"
-			>
-				For more details, click here.
-			</a>
 
 			<div
 				style={{
@@ -78,6 +63,15 @@ function ErrorComponent({ detections, validityHandler }) {
 					justifyContent: 'center',
 				}}
 			>
+				<Button
+					type="button"
+					onClick={() =>
+						(window.location.href =
+							'https://www.youtube.com/watch?v=dQw4w9WgXcQ')
+					}
+					text="Quick! Click this totally not shady link!"
+					className={classes['retry-btn']}
+				/>
 				<Button
 					type="button"
 					onClick={() => validityHandler((prev) => !prev)}
