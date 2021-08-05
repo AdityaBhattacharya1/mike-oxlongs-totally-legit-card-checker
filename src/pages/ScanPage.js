@@ -88,6 +88,7 @@ const ScanPage = ({ validityHandler, creditCardNums, currCreditCardNum }) => {
 
 	// shorthand for: filter the array, then store the array's length in the variable.
 	// detection - 1 because we don't want to show error for a new entry.
+	// Also: here assuming that every credit card is unique to the user (which for the majority holds true.)
 	const detections =
 		creditCardNums.filter((num) => num === currCreditCardNum).length - 1
 

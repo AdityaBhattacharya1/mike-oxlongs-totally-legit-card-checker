@@ -12,6 +12,7 @@ Do you suspect that your credit card details have been stolen by a hacker? Well 
 -   **Detail verification**: So that you don't send any fake data (harmful for our business)
 -   **Cross-Platform?**: Yes.
 -   **Safe and Secure?**: Yes.
+-   **Easter Eggs**
 
 ## Tech Stack
 
@@ -21,12 +22,13 @@ Do you suspect that your credit card details have been stolen by a hacker? Well 
 
 ## On a Serious note
 
--   This software is neither sending any data anywhere nor is it storing any data.
+-   This software is neither sending any data anywhere nor is it storing any data (exception is the data stored in state. Refer to the [Privacy Concerns](#privacy-concerns) section for more info).
 -   Data verification:
     -   Credit card number is being checked with the [Luhn algorithm](https://en.wikipedia.org/wiki/Luhn_algorithm).
     -   Expiry date is being checked via regex.
 -   Unfortunately, the Mike Oxlong company does not exist (yet).
 -   Although it is not sending or storing any data, it is just a joke application and should only be taken as a joke. This is not meant to be a commercial product.
+-   For further privacy related concerns, refer [here](#privacy-concerns).
 
 ## How to Use
 
@@ -50,6 +52,17 @@ npm run tauri dev
 # Run in prod mode
 npm run tauri build
 ```
+
+## Privacy Concerns
+
+**Data Stored**\
+For the error page, the data is being stored in [state](https://reactjs.org/docs/state-and-lifecycle.html). This state data will be cleared as soon as the page is refreshed or the app is closed. Apart from that, there is no database which the app is connected to. The database referred to in the app is **fictional**.
+
+**Data Sent**\
+None. No data is being sent.
+
+**Is this app really checking my credit card number for vulnerabilities?**\
+Nope. This app is neither affiliated with any organisation nor is it consuming any API.
 
 ## Contributing
 
