@@ -7,7 +7,11 @@ import classes from './FormGroup.module.css'
 // matches for dd/yy format
 const dateRegex = /^(0[1-9]|1[012])[ /]\d\d$/i
 
-const FormGroup = ({ validityHandler }) => {
+const FormGroup = ({
+	validityHandler,
+	creditCardNumsHandler,
+	currCreditCardNumHandler,
+}) => {
 	const {
 		value: creditCardValue,
 		isValid: creditCardIsValid,
@@ -40,8 +44,10 @@ const FormGroup = ({ validityHandler }) => {
 		}
 
 		console.log(creditCardValue, expValue)
+		creditCardNumsHandler((prev) => prev.concat(creditCardValue))
 		resetCreditCard()
 		resetExp()
+		currCreditCardNumHandler(creditCardValue)
 		validityHandler(formIsValid)
 	}
 

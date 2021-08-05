@@ -4,10 +4,25 @@ import ScanPage from './pages/ScanPage'
 
 function App() {
 	const [formIsValid, setFormIsValid] = useState(false)
+	const [creditCardNums, setCreditCardNums] = useState([])
+	const [currCreditCardNum, setCurrCreditCardNum] = useState('')
 	if (!formIsValid) {
-		return <IntroPage validityHandler={setFormIsValid} />
+		console.log(creditCardNums)
+		return (
+			<IntroPage
+				validityHandler={setFormIsValid}
+				creditCardNumsHandler={setCreditCardNums}
+				currCreditCardNumHandler={setCurrCreditCardNum}
+			/>
+		)
 	} else {
-		return <ScanPage validityHandler={setFormIsValid} />
+		return (
+			<ScanPage
+				validityHandler={setFormIsValid}
+				creditCardNums={creditCardNums}
+				currCreditCardNum={currCreditCardNum}
+			/>
+		)
 	}
 }
 
