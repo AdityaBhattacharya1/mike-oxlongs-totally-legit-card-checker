@@ -1,8 +1,7 @@
 name: 'Publish the executables to releases'
 on:
-push:
-    branches:
-        - main
+    push:
+        branches: main
 
 jobs:
     publish-tauri:
