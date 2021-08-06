@@ -94,4 +94,4 @@ SOFTWARE.
 
 ## Inspiration
 
-[Inspired by this post.](https://i.redd.it/l36rh43s9s061.jpg)
+[Inspired by this post.](https://i.redd.it/l36rh43s9s061.jpg) and this [comment](https://www.reddit.com/r/ProgrammerHumor/comments/jyur11/nice_way_to_steal_credit_card/gd8ho5j/?utm_source=reddit&utm_medium=web2x&context=3)
