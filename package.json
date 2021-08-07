@@ -1,7 +1,7 @@
 {
 	"name": "totally-legit-card-checker",
-	"version": "1.1.4",
-	"private": true,
+	"version": "1.1.5",
+	"private": false,
 	"author": "Aditya Bhattacharya",
 	"description": "A totally legit credit card vulnerability checker",
 	"dependencies": {

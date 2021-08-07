@@ -67,9 +67,9 @@ function ErrorComponent({ detections, validityHandler }) {
 					type="button"
 					onClick={() =>
 						(window.location.href =
-							'https://www.youtube.com/watch?v=dQw4w9WgXcQ')
+							'https://i.imgur.com/FKmX7dt.gif')
 					}
-					text="Quick! Click this totally not shady link!"
+					text="Quick, click this totally not shady link!"
 					className={classes['retry-btn']}
 				/>
 				<Button
@@ -106,16 +106,18 @@ const ScanPage = ({ validityHandler, creditCardNums, currCreditCardNum }) => {
 
 	if (loading) {
 		return <Loading />
-	} else if (detections >= 1) {
+	}
+
+	if (detections >= 1) {
 		return (
 			<ErrorComponent
 				detections={detections}
 				validityHandler={validityHandler}
 			/>
 		)
-	} else {
-		return <SuccessComponent validityHandler={validityHandler} />
 	}
+
+	return <SuccessComponent validityHandler={validityHandler} />
 }
 
 export default ScanPage
