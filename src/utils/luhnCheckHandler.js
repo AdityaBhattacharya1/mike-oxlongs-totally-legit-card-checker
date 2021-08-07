@@ -19,7 +19,7 @@ export const luhnCheckHandler = (num) => {
 		if (i % 2 !== 0) {
 			acc + val
 		} else {
-			if (acc + ((val *= 2) > 9) {
+			if (acc + ((val = val * 2) > 9) {
 				val - 9
 			} else {
 				val)

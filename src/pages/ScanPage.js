@@ -49,11 +49,7 @@ function ErrorComponent({ detections, validityHandler }) {
 		<>
 			<ErrorSvg />
 			<h1 className={classes['error-text']}>
-				Warning!{' '}
-				{detections === 1
-					? `${detections} detection`
-					: `${detections} detections`}{' '}
-				in our database!
+				Warning! Credentials have been detected in our database!
 			</h1>
 
 			<div
@@ -69,7 +65,7 @@ function ErrorComponent({ detections, validityHandler }) {
 						(window.location.href =
 							'https://i.imgur.com/FKmX7dt.gif')
 					}
-					text="Quick, click this totally not shady link!"
+					text="For help, click this totally not shady link!"
 					className={classes['retry-btn']}
 				/>
 				<Button
@@ -89,8 +85,8 @@ const ScanPage = ({ validityHandler, creditCardNums, currCreditCardNum }) => {
 	// shorthand for: filter the array, then store the array's length in the variable.
 	// detection - 1 because we don't want to show error for a new entry.
 	// Also: here assuming that every credit card is unique to the user (which for the majority holds true.)
-	const detections =
-		creditCardNums.filter((num) => num === currCreditCardNum).length - 1
+	const credentialsDetected =
+		creditCardNums.filter((num) => num === currCreditCardNum).length > 1
 
 	// Totally legit top secret process
 	const LOADING_TIMEOUT =
@@ -104,20 +100,20 @@ const ScanPage = ({ validityHandler, creditCardNums, currCreditCardNum }) => {
 		return () => clearTimeout(loadingTimer)
 	})
 
-	if (loading) {
-		return <Loading />
-	}
-
-	if (detections >= 1) {
-		return (
-			<ErrorComponent
-				detections={detections}
-				validityHandler={validityHandler}
-			/>
-		)
-	}
-
-	return <SuccessComponent validityHandler={validityHandler} />
+	return (
+		<>
+			{loading && <Loading />}
+			{!loading && credentialsDetected && (
+				<ErrorComponent
+					detections={credentialsDetected}
+					validityHandler={validityHandler}
+				/>
+			)}
+			{!loading && !credentialsDetected && (
+				<SuccessComponent validityHandler={validityHandler} />
+			)}
+		</>
+	)
 }
 
 export default ScanPage
