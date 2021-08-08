@@ -11,7 +11,7 @@ Do you suspect that your credit card details have been stolen by a hacker? Well 
 -   **Made with Tauri**: Should be fast (fast enough)
 -   **Detail verification**: So that you don't send any fake data (harmful for our business)
 -   **Cross-Platform?**: Yes.
--   **Safe and Secure?**: Yes.
+-   **Safe and Secure?**: Absolutely.
 -   **Easter Eggs**
 
 ## Tech Stack
@@ -32,7 +32,7 @@ Do you suspect that your credit card details have been stolen by a hacker? Well 
 
 ## How to Use
 
-Download the executable files (or the msi file) from the releases section and launch the app.
+Download the executable files (`.msi` for Windows; `.deb`, `.AppImage` for Linux and `.app`, `.dmg` for Apple) from the releases section and launch the app.
 
 ## Clone and install
 
@@ -59,7 +59,7 @@ npm run tauri build
 For the error page, the data is being stored in [state](https://reactjs.org/docs/state-and-lifecycle.html). This state data will be cleared as soon as the page is refreshed or the app is closed. Apart from that, there is no database which the app is connected to. The database referred to in the app is **fictional**.
 
 **Data Sent**\
-None. No data is being sent.
+None. No data is being sent anywhere. The app works offline just as well.
 
 **Is this app really checking my credit card number for vulnerabilities?**\
 Nope. This app is neither affiliated with any organisation nor is it consuming any API.
@@ -94,4 +94,4 @@ SOFTWARE.
 
 ## Inspiration
 
-[Inspired by this post](https://i.redd.it/l36rh43s9s061.jpg) and this [comment](https://www.reddit.com/r/ProgrammerHumor/comments/jyur11/nice_way_to_steal_credit_card/gd8ho5j/?utm_source=reddit&utm_medium=web2x&context=3)
+[Inspired by this post](https://i.redd.it/l36rh43s9s061.jpg) and this [comment](https://www.reddit.com/r/ProgrammerHumor/comments/jyur11/nice_way_to_steal_credit_card/gd8ho5j/?utm_source=reddit&utm_medium=web2x&context=3).
