@@ -37,16 +37,16 @@ Download the executable files (`.msi` for Windows; `.deb`, `.AppImage` for Linux
 ## Clone and install
 
 ```sh
-git clone https://github.com/AdityaBhattacharya1/totally-legit-card-checker.git
+git clone https://github.com/AdityaBhattacharya1/mike-oxlongs-totally-legit-card-checker.git
 
-cd ./totally-legit-card-checker
+cd ./mike-oxlongs-totally-legit-card-checker
 npm install
 
 # Run in dev mode
 
 # start the react frontend
 npm start
-# start the tauri webview app
+# start the tauri app
 npm run tauri dev
 
 # Run in prod mode
