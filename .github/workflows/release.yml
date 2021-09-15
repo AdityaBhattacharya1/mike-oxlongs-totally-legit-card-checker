@@ -24,7 +24,7 @@ jobs:
               uses: phips28/gh-action-bump-version@v8.0.18
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            - if: matrix.platform !== 'ubuntu-latest'
+            - if: matrix.platform != 'ubuntu-latest'
               name: Automatic version bump using npm command
               run: npm version patch
                   
