@@ -1,7 +1,7 @@
 {
 	"package": {
 		"productName": "totally-legit-card-checker",
-		"version": "1.1.9"
+		"version": "1.1.10"
 	},
 	"build": {
 		"distDir": "../build",

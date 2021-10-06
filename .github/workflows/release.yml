@@ -3,48 +3,37 @@ on:
     push:
         branches: main
 
-jobs:     
-    publish-tauri:
-        strategy:
-            fail-fast: false
-            matrix:
-                platform: [macos-latest, ubuntu-latest, windows-latest]
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        platform: [ubuntu-latest, macos-latest, windows-latest]
 
-        runs-on: ${{ matrix.platform }}
-        steps:
-            - uses: actions/checkout@v2
-            - name: setup node
-              uses: actions/setup-node@v1
-              with:
-                  node-version: 14
-                  
-                
-            - if: matrix.platform == 'ubuntu-latest'
-              name: Automatic version bump using gh-action-bump-version
-              uses: phips28/gh-action-bump-version@v8.0.18
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            - if: matrix.platform != 'ubuntu-latest'
-              name: Automatic version bump using npm command
-              run: npm version patch
-                  
-            - name: install Rust stable
-              uses: actions-rs/toolchain@v1
-              with:
-                  toolchain: stable
-            - name: install webkit2gtk (ubuntu only)
-              if: matrix.platform == 'ubuntu-latest'
-              run: |
-                  sudo apt-get update
-                  sudo apt-get install -y webkit2gtk-4.0
-            - name: install app dependencies and build it
-              run: npm install && npm run tauri build
-            - uses: tauri-apps/tauri-action@v0
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-              with:
-                  tagName: v__VERSION__
-                  releaseName: 'Totally Legit Card Vulnerability Checker - v__VERSION__'
-                  releaseBody: 'See the assets to download this version and install.'
-                  releaseDraft: true
-                  prerelease: false
+    runs-on: ${{ matrix.platform }}
+    steps:
+    - uses: actions/checkout@v2
+    - name: setup node
+      uses: actions/setup-node@v1
+      with:
+        node-version: 14
+    - name: install Rust stable
+      uses: actions-rs/toolchain@v1
+      with:
+        toolchain: stable
+    - name: install webkit2gtk (ubuntu only)
+      if: matrix.platform == 'ubuntu-latest'
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y webkit2gtk-4.0
+    - name: install example dependencies
+      run: npm install
+    - uses: tauri-apps/tauri-action@v0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tagName: v__VERSION__
+        releaseName: 'Totally Legit Card Vulnerability Checker - v__VERSION__'
+        releaseBody: 'See the assets to download this version and install.'
+        releaseDraft: false
+        prerelease: false
