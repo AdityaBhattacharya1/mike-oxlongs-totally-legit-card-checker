@@ -1,6 +1,6 @@
 [package]
 name = "app"
-version = "0.1.0"
+version = "1.1.9"
 description = "A totally legit credit card vulnerability checker. This is meant as a joke and is not to be used commercially."
 authors = ["Aditya Bhattacharya"]
 license = "MIT"
